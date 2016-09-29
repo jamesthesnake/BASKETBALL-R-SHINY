@@ -11,6 +11,7 @@ library(tools)
 library(data.table)
 library(dplyr)
 library(png)
+#increase mb size for site
 options(shiny.maxRequestSize = 200*1024^2)
 
 # backend 
@@ -19,7 +20,7 @@ server <- shinyServer(function(input, output) {
   # instructions tab
   output$text1 <- renderText({ "0) You can easily make a .csv file by simply saving your Microsoft Excel workbook as a .csv through 'Save As'.  Before saving as a .csv, your Excel file should look something like:" })
   output$text2 <- renderText({ "Nba Timeout finder, find intersting stats"})
-
+	#add more text
   # sample file download
   output$downloadData <- downloadHandler(
   	filename <- function() {
